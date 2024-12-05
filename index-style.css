@@ -56,3 +56,37 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+ swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust height as needed */
+    width: 200px;  /* Width for the slides */
+    background-color: #882525; /* Example color */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  swiper-slide:hover {
+    transform: scale(1.01); /* Slightly expand */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for emphasis */
+}
