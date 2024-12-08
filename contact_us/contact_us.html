@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <form id="registrationForm" class="bg-white p-8 rounded shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-bold text-center mb-6">Student Registration</h1>
+
+        <!-- Full Name -->
+        <div class="mb-4">
+            <label for="fullName" class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input type="text" id="fullName" name="fullName" class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded" placeholder="Enter your full name" />
+        </div>
+
+        <!-- Student ID -->
+        <div class="mb-4">
+            <label for="studentId" class="block text-sm font-medium text-gray-700">Student ID (NIM)</label>
+            <input type="text" id="studentId" name="studentId" class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded" placeholder="Enter your student ID" />
+        </div>
+
+        <!-- Email Address -->
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+            <input type="email" id="email" name="email" class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded" placeholder="Enter your email" />
+        </div>
+
+        <!-- Faculty/Major -->
+        <div class="mb-4">
+            <label for="faculty" class="block text-sm font-medium text-gray-700">Faculty/Major</label>
+            <select id="faculty" name="faculty" class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded">
+                <option value="">Select your faculty</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Business">Business</option>
+                <option value="Arts">Arts</option>
+                <option value="Sciences">Sciences</option>
+            </select>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="mb-4">
+            <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+            <input type="date" id="dob" name="dob" class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded" />
+        </div>
+
+        <!-- Gender -->
+        <div class="mb-4">
+            <span class="block text-sm font-medium text-gray-700">Gender</span>
+            <div class="flex items-center mt-2 space-x-4">
+                <label>
+                    <input type="radio" name="gender" value="Male" class="focus:ring-2 focus:ring-blue-500" />
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Female" class="focus:ring-2 focus:ring-blue-500" />
+                    Female
+                </label>
+            </div>
+        </div>
+
+        <!-- Address -->
+        <div class="mb-4">
+            <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+            <textarea id="address" name="address" class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded" placeholder="Enter your address"></textarea>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-4">
+            <label for="phoneNumber" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded" placeholder="Enter your phone number" />
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex items-center justify-between mt-6">
+            <button type="button" id="clearButton" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Clear</button>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        // JavaScript for Form Validation and Interactivity
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const studentId = document.getElementById('studentId').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const faculty = document.getElementById('faculty').value;
+            const dob = document.getElementById('dob').value;
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const address = document.getElementById('address').value.trim();
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
+
+            // Validation
+            if (!fullName || !studentId || !email || !faculty || !dob || !gender || !address || !phoneNumber) {
+                alert('All fields are required.');
+                return;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (!/^\d+$/.test(phoneNumber) || phoneNumber.length < 10) {
+                alert('Phone Number must be numeric and at least 10 digits.');
+                return;
+            }
+
+            alert('Registration successful!');
+            this.reset();
+        });
+
+        // Clear Button Functionality
+        document.getElementById('clearButton').addEventListener('click', function () {
+            document.getElementById('registrationForm').reset();
+        });
+    </script>
+
+</body>
+
+</html>
