@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+    <header class="w-full max-w-4xl bg-blue-500 text-white p-4 rounded shadow-md text-center">
+        <h1 class="text-2xl font-bold">Fetched Posts</h1>
+    </header>
+
+    <main id="postsContainer" class="mt-6 w-full max-w-4xl grid gap-4">
+        <!-- Fetched posts will be inserted here -->
+    </main>
+
+    <footer class="w-full max-w-4xl text-center mt-auto p-4 bg-gray-200 rounded shadow-md">
+        <p class="text-sm text-gray-600">Data retrieved from JSONPlaceholder API.</p>
+    </footer>
+
+    <script>
+        // Replace xx with the last two digits of your NIM
+        const NIM_LAST_TWO = "xx";
+        const API_URL = `https://jsonplaceholder.typicode.com/posts/${NIM_LAST_TWO}`;
+
+        const postsContainer = document.getElementById('postsContainer');
+
+        // Fetch data from the API
+        async function fetchPost() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error('Failed to fetch data');
+                const postData = await response.json();
+
+                // Render the post data
+                renderPost(postData);
+            } catch (error) {
+                postsContainer.innerHTML = `
+                    <div class="bg-red-100 text-red-700 p-4 rounded shadow-md">
+                        <p>Error: ${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Render post data in a card layout
+        function renderPost(post) {
+            postsContainer.innerHTML = `
+                <div class="bg-white p-6 rounded shadow-md">
+                    <h2 class="text-lg font-semibold text-blue-500">Post ID: ${post.id}</h2>
+                    <h3 class="text-xl font-bold text-gray-800 mt-2">${post.title}</h3>
+                    <p class="text-gray-700 mt-4">${post.body}</p>
+                </div>
+            `;
+        }
+
+        // Fetch and display the post on page load
+        fetchPost();
+    </script>
+</body>
+
+</html>
