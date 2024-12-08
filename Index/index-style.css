@@ -1,4 +1,8 @@
-
+body{
+  font-family: Gabarito, sans-serif;
+  padding: 0;
+  margin: 0;
+}
 
 .dropdown {
     position: relative;
@@ -57,6 +61,94 @@
     display: block;
   }
 
+  .carousel-container {
+    position: relative;  /* Changed from absolute to avoid overlap issues */
+    width: 100%;
+    max-width: 10000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 40px 0 10px 0;
+    top: 80px;  /* Start the carousel after the header */
+}
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    padding: 0 141px;
+  }
+
+  .carousel-slide1 {
+    min-width: 1200px;
+    height: 400px;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .carousel-slide1:hover {
+    transform: scale(1.02);
+    z-index: 1;
+  
+  }
+
+  .carousel-slide1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 140px;
+  }
+
+  .nav-button:hover {
+    background: #c4d3d3;
+  }
+  .slide-button{
+    height: 15px;
+  }
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .preview-left, .preview-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 200px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .preview-left {
+    left: 0;
+  }
+
+  .preview-right {
+    right: 0;
+  }
+
+
   
   .swiper-slide {
     display: flex;
@@ -76,9 +168,17 @@ swiper-slide{
         height: 0; /* Set height to 0 on smaller screens */
     }
 }
+@media (max-width: 768px) {
+  .carousel-container {
+    display: none; /* Hide the carousel */
+  }
+}
+    
 
 
 swiper-slide:hover {
   transform: scale(1.01); /* Slightly expand */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for emphasis */
 }
+
+

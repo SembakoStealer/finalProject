@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JIWA GROUP</title>
     <link rel="shortcut icon" href="Logos\Icon.png" />
-    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -115,42 +114,30 @@
         src="bg-hero middle.jpg"
         alt="midde-picture-background"
         class="bg-cover absolute"
+        style="width: 100%; height: 17%;"
       />
     </div>
-    <div class="md:py-20 sm:py-1 sm:bg-cover md:bg-auto hidden lg:block">
-      <swiper-container
-        class="mySwiper"
-        navigation="true"
-        space-between="30"
-        loop="true"
-        watch-slides-progress="true"
-        slides-per-view="1.5"
-        centered-slides="true"
-        space-between="50"
-        grab-cursor="true"
-      >
-        <swiper-slide
-          ><img
-            src="index pictures\Banner Ads\banner1.jpg"
-            alt="carousel-promo-picture-1"
-        /></swiper-slide>
-        <swiper-slide
-          ><img
-            src="index pictures\Banner Ads\banner2.jpg"
-            alt="carousel-promo-picture-2"
-        /></swiper-slide>
-        <swiper-slide
-          ><img
-            src="index pictures\Banner Ads\banner3.jpg"
-            alt="carousel-promo-picture-3"
-        /></swiper-slide>
-        <swiper-slide
-          ><img
-            src="index pictures\Banner Ads\banner4.jpg"
-            alt="carousel-promo-picture-4"
-        /></swiper-slide>
-      </swiper-container>
-    </div>
+
+    <div class="carousel-container" id="carousel-1">
+      <button class="nav-button prev"><img src="index pictures\misc\arrow-left.png" class="slide-button"></button>
+      <button class="nav-button next"><img src="index pictures\misc\arrow-right.png" class="slide-button"></button>
+      
+      <div class="carousel-track">
+        <div class="carousel-slide1">
+          <img src="index pictures\Banner Ads\banner1.jpg" alt="Slide 1">
+        </div>
+        <div class="carousel-slide1">
+          <img src="index pictures\Banner Ads\banner2.jpg" alt="Slide 2">
+        </div>
+        <div class="carousel-slide1">
+          <img src="index pictures\Banner Ads\banner3.jpg" alt="Slide 3">
+        </div>
+        <div class="carousel-slide1">
+          <img src="index pictures\Banner Ads\banner4.jpg" alt="Slide 4">
+        </div>
+        </div>
+      </div>
+
     <div class="py-8 px-8 sm:bg-cover md:bg-cover block lg:hidden">
       <swiper-container
         class="mySwiper"
@@ -185,6 +172,60 @@
       </swiper-container>
     </div>
 
+    <div class="container mx-auto pt-60">
+      <div>
+        <hr class="border-2 border-lime-500 w-14 mx-auto" />
+        <p
+          class="flex text-2xl justify-center text-emerald-800 py-5 font-bold"
+          style="font-family: Gabarito, sans-serif"
+        >
+          Brand Kami
+        </p>
+      </div>
+
+      <div class="franchise">
+        <div class="franchise-container">
+            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
+            slides-per-view="3">
+                <swiper-slide>
+                    <img class="small-images" src="index pictures\Franchise Logos\franchise1.png" alt="Franchise 1">
+                    <div class="subfranchise-text">
+                        <h2>Janji Jiwa</h2>
+                        <p style="margin-bottom: 50px;">The Largest Coffee Chain in Indonesia</p>
+                        <a href="#" style="font-size:15px">See Detail</a>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="small-images" src="index pictures\Franchise Logos\franchise2.png" alt="Franchise 2">
+                    <div class="subfranchise-text">
+                        <h2>Jiwa Tea</h2>
+                        <p style="margin-bottom: 50px;">Sip Well, Feel Well with Jiwa Tea!</p>
+                        <a href="#"  style="font-size:15px":1px>See Detail</a>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="big-images" src="index pictures\Franchise Logos\franchise3.png" alt="Franchise 3">
+                    <div class="subfranchise-text">
+                        <h2>Burger Geber</h2>
+                        <p style="margin-bottom: 50px;">#GEBERinaja</p>
+                        <a href="#" style="font-size:15px">See Detail</a>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="small-images" src="index pictures\Franchise Logos\franchise4.png" alt="Franchise 3">
+                    <div class="subfranchise-text">
+                        <h2>Kopi Sejuta Jiwa</h2>
+                        <p style="margin-bottom: 35px;">New Mobile Coffee Cart Concept from<br> Janji Jiwa</p>
+                        <a href="#" style="font-size:15px">See Detail</a>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+        </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="scriptindex.js"></script>
+
   </body>
 </html>
