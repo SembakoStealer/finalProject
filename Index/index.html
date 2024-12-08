@@ -111,7 +111,7 @@
 
     <div>
       <img
-        src="bg-hero middle.jpg"
+        src="index pictures\bg-hero middle.jpg"
         alt="midde-picture-background"
         class="bg-cover absolute"
         style="width: 100%; height: 17%;"
@@ -187,11 +187,11 @@
         <div class="franchise-container">
             <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
             slides-per-view="3">
-                <swiper-slide>
-                    <img class="small-images" src="index pictures\Franchise Logos\franchise1.png" alt="Franchise 1">
+                <swiper-slide class="p-10">
+                    <img class="w-60 " src="index pictures\Franchise Logos\franchise1.png" alt="Franchise 1">
                     <div class="subfranchise-text">
-                        <h2>Janji Jiwa</h2>
-                        <p style="margin-bottom: 50px;">The Largest Coffee Chain in Indonesia</p>
+                        <h2 class="font-bold">Janji Jiwa</h2>
+                        <p class="mb-16">The Largest Coffee Chain in Indonesia</p>
                         <a href="#" style="font-size:15px">See Detail</a>
                     </div>
                 </swiper-slide>
@@ -222,35 +222,106 @@
             </swiper-container>
         </div>
     </div>
+    </div>
 
 
 
 
 
-
-    <footer class="container">
-      <div>
-        <img src="Logos\jiwa-logo.png" alt="janji-jiwa-logo">
-        <hr class="border-2 border-lime-500 w-14" />
-        <p>PT Luna Boga Narayan</p>
-        <h3>Hubungi Kami</h3>
-        <p><i class="material-icons">mail_outline</i>info@jiwagroup.com</p>
-        <p><i class="material-icons">place</i>Jl. Kedoya Raya No.2 Kota<br>
-        Jakarta Barat, Daerah Khusus<br>
-        Ibukota Jakarta 11520
-        </p>
+    <footer class="bg-gray-100 pt-10">
+      <div class="max-w-7xl mx-auto flex flex-wrap lg:flex-nowrap justify-between items-start px-5 lg:px-10 gap-8">
+        <!-- Left Section -->
+        <div class="w-full lg:w-1/4 text-left lg:text-left">
+          <img src="Logos/jiwa-logo.png" alt="janji-jiwa-logo" class="h-10 align-start lg:mx-0 mb-4" />
+          <hr class="border-2 border-lime-500 w-14 align-start lg:mx-0" />
+          <p class="pt-2 text-gray-500">PT Luna Boga Narayan</p>
+          <h3 class="font-bold pt-4 text-green-900">Hubungi Kami</h3>
+          <p class="flex align-start text-gray-500 gap-2">
+            <i class="material-icons text-green-800">mail_outline</i>info@jiwagroup.com
+          </p>
+          <p class="flex align-start items-center text-gray-500 gap-2">
+            <i class="material-icons text-green-800">place</i>
+            Jl. Kedoya Raya No.2 Kota<br />
+            Jakarta Barat, Daerah Khusus<br />
+            Ibukota Jakarta 11520
+          </p>
+          <div class="flex align-start pt-5 gap-20 lg:gap-4">
+            <button class="socmed-button border-2 border-green-700 py-1 px-5 hover:bg-green-700 hover:text-white flex items-center gap-2">
+              <i class="fa fa-youtube-play"></i>
+              <a href="#">YouTube</a>
+            </button>
+            <button class="socmed-button border-2 border-green-700 py-1 px-5 hover:bg-green-700 hover:text-white flex items-center gap-2">
+              <i class="fa fa-instagram"></i>
+              <a href="#">Instagram</a>
+            </button>
+          </div>
+        </div>
         
+        <div class="flex  lg:gap-40 gap-20">
+        <!-- Middle Left Section -->
+        <div class="w-full lg:w-1/4 lg:text-left">
+          <ul class="footer-brands font-bold ">
+            <li class="text-green-900 mb-3">BRAND</li>
+            <li class="text-gray-500">Kopi Sejuta Jiwa</li>
+            <li class="text-gray-500">Burger Geber</li>
+            <li class="text-gray-500">Jiwa Tea</li>
+            <li class="text-gray-500">Janji Jiwa</li>
+          </ul>
+        </div>
+    
+        <!-- Middle Right Section -->
+        <div class="w-full lg:w-1/4 text-center lg:text-left">
+          <ul class="footer-jiwa+ font-bold">
+            <li class="text-green-900 mb-3">JIWA+</li>
+            <li class="text-gray-500 font-bold">Download Sekarang</li>
+            <li class="flex justify-center lg:justify-start mt-2 gap-2">
+              <div class="flex flex-col lg:gap-2">
+              <img src="index pictures/misc/app-apple.png" class="h-8" />
+              <img src="index pictures/misc/app-google.png" class="h-8" />
+            </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>
-
+    
+        <!-- Right Section -->
+        <div class="w-full lg:w-1/4 text-center lg:text-left">
+          <ul class="footer-partnership font-bold">
+            <li class="text-green-900 mb-3">PARTNERSHIP</li>
+            <div class="partnership-border bg-green-800 text-white p-4 rounded-md">
+              <li class="mb-3 text-sm">
+                Let's become a partner and build the<br />perfect product
+              </li>
+              <li>
+                <button class="text-invite-footer bg-white text-green-900 px-5 py-2 rounded-md">
+                  Become A Partner
+                </button>
+              </li>
+            </div>
+          </ul>
+        </div>
       </div>
-      <div>
-
-      </div>
-      <div>
-
-      </div>
+      
+      
     </footer>
+    <div class="w-full bg-gray-200 py-5 mt-0">
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-5 lg:px-10 text-sm text-gray-600">
+        <!-- Copyright Text -->
+        <p class="w-full lg:w-auto text-center lg:text-left mb-4 lg:mb-0">
+          © 2024 Jiwa Group. All rights reserved.
+        </p>
+    
+        <!-- University Links -->
+        <div class="w-full lg:w-auto flex flex-col lg:flex-row lg:items-center gap-4 text-center lg:text-left">
+          <h4 class="font-semibold text-gray-800">Visit Our University:</h4>
+          <ul class="flex flex-col lg:flex-row gap-4">
+            <li><a href="https://fti.unai.edu/" class="text-green-700 hover:underline">IT Faculty</a></li>
+            <li><a href="https://unai.edu/" class="text-green-700 hover:underline">University of Advent Indonesia</a></li>
+            <li><a href="https://jurnal.unai.edu/index.php/teika" class="text-green-700 hover:underline">Journal</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="scriptindex.js"></script>
