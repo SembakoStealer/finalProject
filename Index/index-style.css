@@ -1,184 +1,185 @@
-body{
+body {
   font-family: Gabarito, sans-serif;
   padding: 0;
   margin: 0;
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  #dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  /* Dropdown Button */
-  .dropdown button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .dropdown button:hover {
-    background-color: #0056b3;
-  }
-
-  /* Dropdown Content */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-    border-bottom: 1px solid #eaeaea;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-
-  .dropdown-content a:last-child {
-    border-bottom: none;
-  }
-
-  /* Show Dropdown on Hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .carousel-container {
-    position: relative;  /* Changed from absolute to avoid overlap issues */
-    width: 100%;
-    max-width: 10000px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 40px 0 10px 0;
-    top: 80px;  /* Start the carousel after the header */
+  position: relative;
+  display: inline-block;
 }
 
-  .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-    gap: 20px;
-    padding: 0 141px;
-  }
-
-  .carousel-slide1 {
-    min-width: 1200px;
-    height: 400px;
-    position: relative;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .carousel-slide1:hover {
-    transform: scale(1.02);
-    z-index: 1;
-  
-  }
-
-  .carousel-slide1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgb(255, 255, 255);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    margin: 0 140px;
-  }
-
-  .nav-button:hover {
-    background: #c4d3d3;
-  }
-  .slide-button{
-    height: 15px;
-  }
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
-
-  .preview-left, .preview-right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100px;
-    height: 200px;
-    opacity: 0.5;
-    pointer-events: none;
-  }
-
-  .preview-left {
-    left: 0;
-  }
-
-  .preview-right {
-    right: 0;
-  }
-
-
-  
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px; /* Default height for larger screens */
-    width: 200px;  /* Width for the slides */
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    overflow: hidden;
+#dropdown {
+  position: relative;
+  display: inline-block;
 }
-swiper-slide{
+
+/* Dropdown Button */
+.dropdown button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown button:hover {
+  background-color: #0056b3;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.carousel-container {
+  position: relative; /* Changed from absolute to avoid overlap issues */
+  width: 100%;
+  max-width: 10000px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 40px 0 40px 0;
+  top: 80px; /* Start the carousel after the header */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+  padding: 0 100px;
+}
+
+.carousel-slide1 {
+  min-width: 1200px;
+  height: 400px;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-slide1:hover {
+  transform: scale(1.02);
+  z-index: 1;
+}
+
+.carousel-slide1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 0 140px;
+}
+
+.nav-button:hover {
+  background: #c4d3d3;
+}
+.slide-button {
+  height: 15px;
+}
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.preview-left,
+.preview-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 200px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.preview-left {
+  left: 0;
+}
+
+.preview-right {
+  right: 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Default height for larger screens */
+  width: 200px; /* Width for the slides */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+swiper-slide {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
-    .swiper-slide {
-        height: 0; /* Set height to 0 on smaller screens */
-    }
+  .swiper-slide {
+    height: 0; /* Set height to 0 on smaller screens */
+  }
 }
 @media (max-width: 768px) {
   .carousel-container {
     display: none; /* Hide the carousel */
   }
 }
-    
 
+@media (min-width: 640px) {
+  .carousel-slide2 {
+    max-width: 100%;
+  }
+}
 
 swiper-slide:hover {
   transform: scale(1.01); /* Slightly expand */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for emphasis */
 }
-
 

@@ -48,14 +48,16 @@
             <li class="dropdown">
               BRAND
               <div class="dropdown-content">
-                <a href="#">Jiwa Group</a>
+                <a href="#" class="font-light text-sm">Jiwa Group</a>
               </div>
             </li>
             <li class="dropdown">
-              PARTNERSHIP
+              PROJECTS
               <div class="dropdown-content">
-                <a href="#">Brand Licensing</a>
-                <a href="#">Location Partnership</a>
+                <a href="#" class="font-light text-sm">Biodata</a>
+                <a href="#" class="font-light text-sm">Contact Us</a>
+                <a href="#" class="font-light text-sm">Additional Page</a>
+                <a href="#" class="font-light text-sm">Free Content</a>
               </div>
             </li>
           </ul>
@@ -77,10 +79,10 @@
             <li class="dropdown">
               CORPORATE
               <div class="dropdown-content">
-                <a href="#">About Us</a>
-                <a href="#">Career</a>
-                <a href="#">Contact</a>
-                <a href="#">ESG</a>
+                <a href="#" class="font-light text-sm">About Us</a>
+                <a href="#" class="font-light text-sm">Career</a>
+                <a href="#" class="font-light text-sm">Contact</a>
+                <a href="#" class="font-light text-sm">ESG</a>
               </div>
             </li>
             <li class="dropdown">
@@ -106,6 +108,43 @@
           alt="english-flag"
           class="w-5 h-5"
         />
+      </div>
+      <div class="relative w-64 mx-auto sm:block md:hidden z-50">
+        <!-- Button -->
+        <button
+          class="bg-teal-600 text-white px-4 py-2 rounded-lg w-full text-left flex justify-between items-center"
+          onclick="toggleDropdown()"
+        >
+          Menu
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 transform transition-transform duration-300"
+            id="dropdown-arrow"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+
+        <!-- Dropdown Content -->
+        <div
+          id="dropdown-content"
+          class="absolute left-0 w-full bg-gray-100 border border-gray-300 rounded-lg mt-2 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out z-50"
+        >
+          <div class="p-4">
+            <p class="text-gray-700">
+              sir, i just remembered that im just an ordinary student trying to
+              replicate a mega corporate's website
+            </p>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -176,7 +215,7 @@
       </swiper-container>
     </div>
 
-    <div class="container mx-auto pt-60">
+    <div class="container mx-auto pt-10 lg:pt-60">
       <div>
         <hr class="border-2 border-lime-500 w-14 mx-auto" />
         <p
@@ -285,6 +324,321 @@
         </div>
       </div>
     </div>
+
+    <div class="container mx-auto pt-10 lg:pt-10">
+      <div class="flex flex-col justify-around mx-auto">
+        <hr class="border-2 border-lime-500 w-14 mx-auto" />
+        <p
+          class="flex text-2xl justify-center text-emerald-800 py-5 font-bold"
+          style="font-family: Gabarito, sans-serif"
+        >
+          Terbaru Dari Jiwa Group
+        </p>
+        <!-- News Section -->
+        <div
+          class="flex flex-col lg:flex-row lg:justify-center lg:items-start gap-10"
+        >
+          <!-- News 1 -->
+          <div
+            class="flex flex-col lg:flex-col items-center lg:items-start gap-6 text-left pb-5"
+          >
+            <img
+              src="index pictures/News Pics/news1.jpg"
+              class="h-48 w-auto mx-auto lg:mx-0"
+              alt="News 1"
+            />
+            <div class="flex flex-col">
+              <div class="news-date text-gray-600">
+                <p>2024/08/01 - 02:01:33pm</p>
+              </div>
+              <div class="news-title font-bold text-lg mt-3">
+                <h3 class="text-green-800">
+                  Biobriket dari Ampas Kopi: Solusi <br />Inovatif untuk Energi
+                  Terbarukan dan<br />
+                  Pengelolaan Limbah dari Janji Jiwa
+                </h3>
+              </div>
+              <div class="news-content text-gray-700 mt-3">
+                <p>
+                  Ampas kopi Janji Jiwa memiliki potensi besar <br />untuk
+                  dijadikan salah satu bahan baku <br />pembuatan bahan bakar
+                  alternatif yang <br />ramah lingkungan.
+                </p>
+              </div>
+              <div class="news-details mt-3 pb-2">
+                <a
+                  href="#"
+                  class="text-emerald-600 hover:underline flex items-center justify-start"
+                >
+                  See Details
+                  <img
+                    src="index pictures/misc/arrow-right.png"
+                    class="h-3 w-auto ml-2"
+                    alt="Arrow"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News 2 -->
+          <div
+            class="flex flex-col lg:flex-col items-center lg:items-start gap-6 text-left pb-5"
+          >
+            <!-- Image -->
+            <img
+              src="index pictures/News Pics/news2.jpg"
+              class="h-48 w-auto mx-auto lg:mx-0"
+              alt="News 2"
+            />
+            <!-- Text -->
+            <div class="flex flex-col">
+              <div class="news-date text-gray-600">
+                <p>2024/02/23 - 03:30:03pm</p>
+              </div>
+              <div class="news-title font-bold text-lg mt-3">
+                <h3 class="text-green-800">
+                  Janji Jiwa Raih Penghargaan sebagai<br />
+                  The Brand Of The Year Dua Tahun <br />Berturut-turut
+                </h3>
+              </div>
+              <div class="news-content text-gray-700 mt-3">
+                <p>
+                  Janji Jiwa mampu mempertahankan gelar <br />sebagai Brand of
+                  The Year untuk kategori <br />"Retail Coffee” dari World
+                  Branding Awards <br />2023-2024 selama 2 tahun berturut-turut
+                </p>
+              </div>
+              <div class="news-details mt-3">
+                <a
+                  href="#"
+                  class="text-emerald-600 hover:underline flex items-center justify-start"
+                >
+                  See Details
+                  <img
+                    src="index pictures/misc/arrow-right.png"
+                    class="h-3 w-auto ml-2"
+                    alt="Arrow"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News 3 -->
+          <div
+            class="flex flex-col lg:flex-col items-center lg:items-start gap-6 text-left pb-5"
+          >
+            <!-- Image -->
+            <img
+              src="index pictures/News Pics/news3.jpg"
+              class="h-48 w-auto mx-auto lg:mx-0"
+              alt="News 3"
+            />
+            <!-- Text -->
+            <div class="flex flex-col">
+              <div class="news-date text-gray-600">
+                <p>2024/02/23 - 03:30:03pm</p>
+              </div>
+              <div class="news-title font-bold text-lg mt-3">
+                <h3 class="text-green-800">
+                  Janji Jiwa Raih Penghargaan sebagai<br />
+                  The Brand Of The Year Dua Tahun <br />Berturut-turut
+                </h3>
+              </div>
+              <div class="news-content text-gray-700 mt-3">
+                <p>
+                  Janji Jiwa mampu mempertahankan gelar <br />sebagai Brand of
+                  The Year untuk kategori <br />"Retail Coffee” dari World
+                  Branding Awards <br />2023-2024 selama 2 tahun berturut-turut
+                </p>
+              </div>
+              <div class="news-details mt-3">
+                <a
+                  href="#"
+                  class="text-emerald-600 hover:underline flex items-center justify-start"
+                >
+                  See Details
+                  <img
+                    src="index pictures/misc/arrow-right.png"
+                    class="h-3 w-auto ml-2"
+                    alt="Arrow"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mc-auto flex justify-center mt-8">
+        <button
+          class="border-2 border-green-800 text-green-800 font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out hover:bg-green-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 active:scale-95"
+        >
+          Selengkapnya
+        </button>
+      </div>
+
+      <div class="relative overflow-hidden rounded-lg mt-8">
+        <!-- Image Container -->
+        <div class="image-container relative">
+          <img
+            src="index pictures\bg-hero middle.jpg"
+            alt="Jiwa Group"
+            class="w-full h-64 object-cover mx-auto"
+          />
+
+          <!-- Overlay Text -->
+          <div
+            class="absolute inset-0 flex flex-col justify-center items-center text-white p-4"
+          >
+            <hr class="border-t-2 border-lime-500 w-14 mx-auto mb-2" />
+            <h2 class="text-2xl lg:text-4xl font-bold mt-2">
+              Bergabunglah dengan kami!
+            </h2>
+            <p class="text-center mt-2 text-gray-200">
+              Jadilah bagian dari keluarga besar Jiwa Group. Bertumbuh bersama
+              <br />
+              memajukan industri F&B di Indonesia.
+            </p>
+
+            <!-- Button placed inside overlay -->
+            <a
+              href="#"
+              class="mt-4 inline-block bg-yellow-400 text-green-800 font-bold py-2 px-6 rounded-lg transition duration-300 ease-in-out hover:bg-green-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 shadow-md transform hover:scale-105 active:scale-95"
+            >
+              Selengkapnya
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-10">
+      <!-- Carousel Container -->
+      <div class="relative overflow-hidden rounded-lg">
+        <!-- Carousel Slides -->
+        <div
+          class="carousel-track relative flex transition-transform duration-500 ease-in-out"
+          id="carousel-2"
+        >
+          <!-- Slide 1 -->
+          <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
+            <img
+              src="index pictures/Cards/card1.jpg"
+              alt="Slide 1"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-4 text-white"
+            >
+              <p class="text-yellow-400 font-bold mt-2">20 Seconds</p>
+              <h3 class="text-2xl font-bold mt-2">
+                Kopi Janji Jiwa - Refresher Series
+              </h3>
+              <p class="mt-2 text-gray-200">
+                #KesegaranBaru untuk semua #temansejiwa! Ada Purple Summer dan
+                <br />
+                Blossom Berry yang siap melepas dahaga.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
+            <img
+              src="index pictures/Cards/card2.jpg"
+              alt="Slide 2"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-4 text-white"
+            >
+              <p class="text-yellow-400 font-bold mt-2">16 Seconds</p>
+              <h3 class="text-2xl font-bold mt-2">Jiwa Treats</h3>
+              <p class="mt-2 text-gray-200">
+                Jiwa Treats hadir menjadi pelengkap #temansejiwa untuk menikmati
+                <br />
+                segelas #kopijanjijiwa. Promo tersedia di beberapa Jilid
+                Jabodetabek.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
+            <img
+              src="index pictures/Cards/card3.jpg"
+              alt="Slide 3"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-4 text-white"
+            >
+              <p class="text-yellow-400 font-bold mt-2">33 Seconds</p>
+              <h3 class="text-2xl font-bold mt-2">Segenggam Cerita Cup</h3>
+              <p class="mt-2 text-gray-200">
+                Menghadirkan cerita dalam setiap tegukan. Persembahan dari
+                “Janji” untuk “Jiwa”.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
+            <img
+              src="index pictures/Cards/card5.jpg"
+              alt="Slide 4"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-4 text-white"
+            >
+              <p class="text-yellow-400 font-bold mt-2">1 Minute</p>
+              <h3 class="text-2xl font-bold mt-2">Banana Oat Series</h3>
+              <p class="mt-2 text-gray-200">
+                Rayakan hari #temansejiwa dengan menu Kopi Janji Jiwa x OATSIDE.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
+            <img
+              src="index pictures/Cards/card4.jpg"
+              alt="Slide 5"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-4 text-white"
+            >
+              <p class="text-yellow-400 font-bold mt-2">5 Seconds</p>
+              <h3 class="text-2xl font-bold mt-2">Dippin' Fries</h3>
+              <p class="mt-2 text-gray-200">
+                Cemilan terbaru hanya di #jiwatoast. Promo untuk setiap
+                pembelian sekarang!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button
+          id="prev"
+          class="absolute top-1/2 left-4 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-gray-800"
+        >
+          &#9664;
+        </button>
+        <button
+          id="next"
+          class="absolute top-1/2 right-4 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-gray-800"
+        >
+          &#9654;
+        </button>
+      </div>
+    </div>
+
+    
 
     <footer class="bg-gray-100 pt-10">
       <div
