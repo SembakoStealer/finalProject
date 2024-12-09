@@ -1,65 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Posts Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
-    <header class="w-full max-w-4xl bg-blue-500 text-white p-4 rounded shadow-md text-center">
-        <h1 class="text-2xl font-bold">Fetched Posts</h1>
+  <body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+    <header
+      class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md text-green-900 flex lg:flex-row justify-center px-4 lg:px-12 items-center z-50"
+      style="font-family: Gabarito, sans-serif"
+    >
+      <!-- Main Navigation -->
+      <div
+        class="container flex sm:items-left lg:flex-row lg:items-center lg:justify-between font-bold py-5"
+      >
+        <!-- Navigation Menu -->
+        <!-- Navigation Menu -->
+        <div class="hidden lg:block px-8">
+          <ul class="list-none flex flex-row gap-20 text-lg">
+            <li class="dropdown relative">
+              <span class="inline-block">
+                BRAND
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-700 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  style="margin-left: 4px"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+              <div class="dropdown-content">
+                <a href="#" class="font-light text-sm">Jiwa Group</a>
+              </div>
+            </li>
+            <li class="dropdown relative">
+              <span class="inline-block">
+                PROJECTS
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-700 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  style="margin-left: 4px"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+              <div class="dropdown-content">
+                <a href="biodata.html" class="font-light text-sm">Biodata</a>
+                <a href="contact_us.html" class="font-light text-sm"
+                  >Contact Us</a
+                >
+                <a href="index.html" class="font-light text-sm">Index</a>
+                <a href="freepage.html" class="font-light text-sm">Free Page</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Logo -->
+        <div class="flex justify-center lg:justify-start">
+          <img
+            src="Index\Logos\jiwa-logo.png"
+            alt="janji-jiwa-logo"
+            class="w-16 lg:w-28"
+          />
+        </div>
+
+        <!-- Right Menu -->
+        <div class="hidden lg:block">
+          <ul class="flex flex-row gap-10 text-lg">
+            <li>JIWA+</li>
+            <li class="dropdown relative">
+              <span class="inline-block">
+                CORPORATE
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-700 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  style="margin-left: 4px"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+              <div class="dropdown-content">
+                <a href="biodata.html" class="font-light text-sm">Biodata</a>
+                <a href="contact_us.html" class="font-light text-sm"
+                  >Contact Us</a
+                >
+                <a href="index.html" class="font-light text-sm">Index</a>
+                <a href="freepage.html" class="font-light text-sm">Free Page</a>
+              </div>
+            </li>
+            <li class="dropdown relative">
+              <span class="inline-block">
+                ACCOUNT
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-700 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  style="margin-left: 4px"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+              <div class="dropdown-content">
+                <p>Login to</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Language Selection -->
+      <div class="flex flex-row justify-center items-center py-5 px-10 gap-2">
+        <img
+          src="Index/index pictures/languange flag/lang-id.png"
+          alt="indonesian-flag"
+          class="w-5 h-5"
+        />
+        <p class="font-medium text-xs">|</p>
+        <img
+          src="Index/index pictures/languange flag/lang-en.png"
+          alt="english-flag"
+          class="w-5 h-5"
+        />
+      </div>
+      <div class="relative w-64 mx-auto sm:block lg:hidden z-50">
+        <!-- Button -->
+        <button
+          class="bg-teal-600 text-white px-4 py-2 rounded-lg w-full text-left flex justify-between items-center"
+          onclick="toggleDropdown()"
+        >
+          Menu
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 transition-transform duration-300"
+            id="dropdown-arrow"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+
+        <!-- Dropdown Content -->
+        <div
+          id="dropdown-content"
+          class="absolute left-0 w-full bg-white border border-gray-200 rounded-lg mt-2 shadow-lg max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out z-50"
+        >
+          <ul class="p-2 space-y-1">
+            <li>
+              <a
+                href="biodata.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Biodata
+              </a>
+            </li>
+            <li>
+              <a
+                href="contact_us.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Index
+              </a>
+            </li>
+            <li>
+              <a
+                href="free_content\freepage.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Free Content
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main id="postsContainer" class="mt-6 w-full max-w-4xl grid gap-4">
-        <!-- Fetched posts will be inserted here -->
+      <!-- Fetched posts will be inserted here -->
     </main>
 
-    <footer class="w-full max-w-4xl text-center mt-auto p-4 bg-gray-200 rounded shadow-md">
-        <p class="text-sm text-gray-600">Data retrieved from JSONPlaceholder API.</p>
+    <footer
+      class="w-full max-w-4xl text-center mt-auto p-4 bg-gray-200 rounded shadow-md"
+    >
+      <p class="text-sm text-gray-600">
+        Data retrieved from JSONPlaceholder API.
+      </p>
     </footer>
 
     <script>
-        // Replace xx with the last two digits of your NIM
-        const NIM_LAST_TWO = "xx";
-        const API_URL = `https://jsonplaceholder.typicode.com/posts/${NIM_LAST_TWO}`;
+      // Replace xx with the last two digits of your NIM
+      const NIM_LAST_TWO = "xx";
+      const API_URL = `https://jsonplaceholder.typicode.com/posts/${NIM_LAST_TWO}`;
 
-        const postsContainer = document.getElementById('postsContainer');
+      const postsContainer = document.getElementById("postsContainer");
 
-        // Fetch data from the API
-        async function fetchPost() {
-            try {
-                const response = await fetch(API_URL);
-                if (!response.ok) throw new Error('Failed to fetch data');
-                const postData = await response.json();
+      // Fetch data from the API
+      async function fetchPost() {
+        try {
+          const response = await fetch(API_URL);
+          if (!response.ok) throw new Error("Failed to fetch data");
+          const postData = await response.json();
 
-                // Render the post data
-                renderPost(postData);
-            } catch (error) {
-                postsContainer.innerHTML = `
+          // Render the post data
+          renderPost(postData);
+        } catch (error) {
+          postsContainer.innerHTML = `
                     <div class="bg-red-100 text-red-700 p-4 rounded shadow-md">
                         <p>Error: ${error.message}</p>
                     </div>
                 `;
-            }
         }
+      }
 
-        // Render post data in a card layout
-        function renderPost(post) {
-            postsContainer.innerHTML = `
+      // Render post data in a card layout
+      function renderPost(post) {
+        postsContainer.innerHTML = `
                 <div class="bg-white p-6 rounded shadow-md">
                     <h2 class="text-lg font-semibold text-blue-500">Post ID: ${post.id}</h2>
                     <h3 class="text-xl font-bold text-gray-800 mt-2">${post.title}</h3>
                     <p class="text-gray-700 mt-4">${post.body}</p>
                 </div>
             `;
-        }
+      }
 
-        // Fetch and display the post on page load
-        fetchPost();
+      // Fetch and display the post on page load
+      fetchPost();
     </script>
-</body>
-
+  </body>
 </html>
