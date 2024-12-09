@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JIWA GROUP</title>
-    <link rel="shortcut icon" href="Logos\Icon.png" />
+    <link rel="shortcut icon" href="Index\Logos\Icon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -35,12 +35,12 @@
 
   <body>
     <header
-      class="text-green-900 flex lg:flex-row justify-center px-4 lg:px-12 items-center"
+      class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md text-green-900 flex lg:flex-row justify-center px-4 lg:px-12 items-center z-50"
       style="font-family: Gabarito, sans-serif"
     >
       <!-- Main Navigation -->
       <div
-        class="container flex sm:items-left lg:flex-row lg:items-center lg:justify-between py-4 font-bold"
+        class="container flex sm:items-left lg:flex-row lg:items-center lg:justify-between font-bold py-5"
       >
         <!-- Navigation Menu -->
         <div class="hidden lg:block px-8">
@@ -66,9 +66,9 @@
         <!-- Logo -->
         <div class="flex justify-center lg:justify-start">
           <img
-            src="Logos/jiwa-logo.png"
+            src="Index\Logos\jiwa-logo.png"
             alt="janji-jiwa-logo"
-            class="w-16 lg:w-24"
+            class="w-16 lg:w-28"
           />
         </div>
 
@@ -98,13 +98,13 @@
       <!-- Language Selection -->
       <div class="flex flex-row justify-center items-center py-5 px-10 gap-2">
         <img
-          src="index pictures/languange flag/lang-id.png"
+          src="Index/index pictures/languange flag/lang-id.png"
           alt="indonesian-flag"
           class="w-5 h-5"
         />
         <p class="font-medium text-xs">|</p>
         <img
-          src="index pictures/languange flag/lang-en.png"
+          src="Index/index pictures/languange flag/lang-en.png"
           alt="english-flag"
           class="w-5 h-5"
         />
@@ -150,33 +150,51 @@
 
     <div>
       <img
-        src="index pictures\bg-hero middle.jpg"
+        src="Index\index pictures\bg-hero middle.jpg"
         alt="midde-picture-background"
-        class="bg-cover absolute"
+        class="bg-cover absolute mt-10"
         style="width: 100%; height: 17%"
       />
     </div>
 
     <div class="carousel-container" id="carousel-1">
       <button class="nav-button prev">
-        <img src="index pictures\misc\arrow-left.png" class="slide-button" />
+        <img
+          src="Index\index pictures\misc\arrow-left.png"
+          class="slide-button"
+        />
       </button>
       <button class="nav-button next">
-        <img src="index pictures\misc\arrow-right.png" class="slide-button" />
+        <img
+          src="Index\index pictures\misc\arrow-right.png"
+          class="slide-button"
+        />
       </button>
 
       <div class="carousel-track">
         <div class="carousel-slide1">
-          <img src="index pictures\Banner Ads\banner1.jpg" alt="Slide 1" />
+          <img
+            src="Index\index pictures\Banner Ads\banner1.jpg"
+            alt="Slide 1"
+          />
         </div>
         <div class="carousel-slide1">
-          <img src="index pictures\Banner Ads\banner2.jpg" alt="Slide 2" />
+          <img
+            src="Index\index pictures\Banner Ads\banner2.jpg"
+            alt="Slide 2"
+          />
         </div>
         <div class="carousel-slide1">
-          <img src="index pictures\Banner Ads\banner3.jpg" alt="Slide 3" />
+          <img
+            src="Index\index pictures\Banner Ads\banner3.jpg"
+            alt="Slide 3"
+          />
         </div>
         <div class="carousel-slide1">
-          <img src="index pictures\Banner Ads\banner4.jpg" alt="Slide 4" />
+          <img
+            src="Index\index pictures\Banner Ads\banner4.jpg"
+            alt="Slide 4"
+          />
         </div>
       </div>
     </div>
@@ -194,22 +212,22 @@
       >
         <swiper-slide
           ><img
-            src="index pictures\Banner Ads\banner1.jpg"
+            src="Index\index pictures\Banner Ads\banner1.jpg"
             alt="carousel-promo-picture-1"
         /></swiper-slide>
         <swiper-slide
           ><img
-            src="index pictures\Banner Ads\banner2.jpg"
+            src="Index\index pictures\Banner Ads\banner2.jpg"
             alt="carousel-promo-picture-2"
         /></swiper-slide>
         <swiper-slide
           ><img
-            src="index pictures\Banner Ads\banner3.jpg"
+            src="Index\index pictures\Banner Ads\banner3.jpg"
             alt="carousel-promo-picture-3"
         /></swiper-slide>
         <swiper-slide
           ><img
-            src="index pictures\Banner Ads\banner4.jpg"
+            src="Index\index pictures\Banner Ads\banner4.jpg"
             alt="carousel-promo-picture-4"
         /></swiper-slide>
       </swiper-container>
@@ -239,15 +257,15 @@
           >
             <!-- Slide 1 -->
             <swiper-slide
-              class="p-4 flex flex-col items-center bg-white shadow-md rounded-lg h-[300px] w-[250px]"
+              class="p-4 flex flex-col items-center bg-white shadow-md rounded-lg h-[330px] w-[250px] border-2"
             >
               <img
-                class="h-20"
-                src="index pictures/Franchise Logos/franchise1.png"
+                class="h-20 mb-4"
+                src="Index/index pictures/Franchise Logos/franchise1.png"
                 alt="Franchise 1"
               />
-              <div class="subfranchise-text">
-                <h2 class="font-bold text-lg mt-9">Janji Jiwa</h2>
+              <div class="subfranchise-text text-left w-full">
+                <h2 class="font-bold text-lg mt-10">Janji Jiwa</h2>
                 <p class="text-gray-500 mt-2">
                   The Largest Coffee Chain in Indonesia
                 </p>
@@ -261,14 +279,14 @@
 
             <!-- Slide 2 -->
             <swiper-slide
-              class="p-4 flex flex-col items-center bg-white shadow-md rounded-lg h-[300px] w-[250px]"
+              class="p-4 flex flex-col items-center bg-white shadow-md rounded-lg h-[330px] w-[250px] border-2"
             >
               <img
-                class="h-20"
-                src="index pictures/Franchise Logos/franchise2.png"
+                class="h-20 mb-4"
+                src="Index/index pictures/Franchise Logos/franchise2.png"
                 alt="Franchise 2"
               />
-              <div class="subfranchise-text">
+              <div class="subfranchise-text text-left w-full">
                 <h2 class="font-bold text-lg mt-9">Jiwa Tea</h2>
                 <p class="text-gray-500 mt-2">
                   Sip Well, Feel Well with Jiwa Tea!
@@ -283,14 +301,14 @@
 
             <!-- Slide 3 -->
             <swiper-slide
-              class="p-4 flex flex-col items-center bg-white shadow-md rounded-lg h-[300px] w-[250px]"
+              class="p-4 flex flex-col items-center bg-white shadow-md rounded-lg h-[330px] w-[250px] border-2"
             >
               <img
-                class="h-20"
-                src="index pictures/Franchise Logos/franchise3.png"
+                class="h-20 mb-4"
+                src="Index/index pictures/Franchise Logos/franchise3.png"
                 alt="Franchise 3"
               />
-              <div class="subfranchise-text">
+              <div class="subfranchise-text text-left w-full">
                 <h2 class="font-bold text-lg align-left mt-9">Burger Geber</h2>
                 <p class="text-gray-500 mt-2">#GEBERinaja</p>
                 <a
@@ -303,14 +321,14 @@
 
             <!-- Slide 4 -->
             <swiper-slide
-              class="p-4 flex flex-col items-center justify-between bg-white shadow-md rounded-lg h-[300px] w-[250px]"
+              class="p-4 flex flex-col items-center bg-white shadow-md rounded-lg h-[330px] w-[250px] border-2"
             >
               <img
-                class="h-20 h-auto"
-                src="index pictures/Franchise Logos/franchise4.png"
+                class="h-20 mb-4"
+                src="Index/index pictures/Franchise Logos/franchise4.png"
                 alt="Franchise 4"
               />
-              <div class="subfranchise-text">
+              <div class="subfranchise-text text-left w-full">
                 <h2 class="font-bold text-lg">Kopi Sejuta Jiwa</h2>
                 <p class="text-gray-500 mt-2">New Mobile Coffee Cart Concept</p>
                 <a
@@ -343,7 +361,7 @@
             class="flex flex-col lg:flex-col items-center lg:items-start gap-6 text-left pb-5"
           >
             <img
-              src="index pictures/News Pics/news1.jpg"
+              src="Index/index pictures/News Pics/news1.jpg"
               class="h-48 w-auto mx-auto lg:mx-0"
               alt="News 1"
             />
@@ -387,7 +405,7 @@
           >
             <!-- Image -->
             <img
-              src="index pictures/News Pics/news2.jpg"
+              src="Index/index pictures/News Pics/news2.jpg"
               class="h-48 w-auto mx-auto lg:mx-0"
               alt="News 2"
             />
@@ -431,7 +449,7 @@
           >
             <!-- Image -->
             <img
-              src="index pictures/News Pics/news3.jpg"
+              src="Index/index pictures/News Pics/news3.jpg"
               class="h-48 w-auto mx-auto lg:mx-0"
               alt="News 3"
             />
@@ -460,7 +478,7 @@
                 >
                   See Details
                   <img
-                    src="index pictures/misc/arrow-right.png"
+                    src="Index/index pictures/misc/arrow-right.png"
                     class="h-3 w-auto ml-2"
                     alt="Arrow"
                   />
@@ -483,7 +501,7 @@
         <!-- Image Container -->
         <div class="image-container relative">
           <img
-            src="index pictures\bg-hero middle.jpg"
+            src="Index\index pictures\bg-hero middle.jpg"
             alt="Jiwa Group"
             class="w-full h-64 object-cover mx-auto"
           />
@@ -525,7 +543,7 @@
           <!-- Slide 1 -->
           <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
             <img
-              src="index pictures/Cards/card1.jpg"
+              src="Index/index pictures/Cards/card1.jpg"
               alt="Slide 1"
               class="w-full h-64 object-cover"
             />
@@ -547,7 +565,7 @@
           <!-- Slide 2 -->
           <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
             <img
-              src="index pictures/Cards/card2.jpg"
+              src="Index/index pictures/Cards/card2.jpg"
               alt="Slide 2"
               class="w-full h-64 object-cover"
             />
@@ -568,7 +586,7 @@
           <!-- Slide 3 -->
           <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
             <img
-              src="index pictures/Cards/card3.jpg"
+              src="Index/index pictures/Cards/card3.jpg"
               alt="Slide 3"
               class="w-full h-64 object-cover"
             />
@@ -587,7 +605,7 @@
           <!-- Slide 4 -->
           <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
             <img
-              src="index pictures/Cards/card5.jpg"
+              src="Index/index pictures/Cards/card5.jpg"
               alt="Slide 4"
               class="w-full h-64 object-cover"
             />
@@ -605,7 +623,7 @@
           <!-- Slide 5 -->
           <div class="carousel-slide2 w-80 lg:w-full flex-shrink-0 relative">
             <img
-              src="index pictures/Cards/card4.jpg"
+              src="Index/index pictures/Cards/card4.jpg"
               alt="Slide 5"
               class="w-full h-64 object-cover"
             />
@@ -638,7 +656,13 @@
       </div>
     </div>
 
-    
+    <div class="flex justify-center items-center mt-8 mb-8">
+      <img
+        src="Index/index pictures/Last image.png"
+        alt="middle-picture-background"
+        class="w-full max-w-4xl h-auto"
+      />
+    </div>
 
     <footer class="bg-gray-100 pt-10">
       <div
@@ -647,7 +671,7 @@
         <!-- Left Section -->
         <div class="w-full lg:w-1/4 text-left lg:text-left">
           <img
-            src="Logos/jiwa-logo.png"
+            src="Index/Logos/jiwa-logo.png"
             alt="janji-jiwa-logo"
             class="h-10 align-start lg:mx-0 mb-4"
           />
@@ -683,8 +707,8 @@
         <div class="flex lg:gap-40 gap-20">
           <!-- Middle Left Section -->
           <div class="w-full lg:w-1/4 lg:text-left">
-            <ul class="footer-brands font-bold">
-              <li class="text-green-900 mb-3">BRAND</li>
+            <ul class="footer-brands">
+              <li class="text-green-900 mb-3 font-bold">BRAND</li>
               <li class="text-gray-500">Kopi Sejuta Jiwa</li>
               <li class="text-gray-500">Burger Geber</li>
               <li class="text-gray-500">Jiwa Tea</li>
@@ -694,13 +718,19 @@
 
           <!-- Middle Right Section -->
           <div class="w-full lg:w-1/4 text-center lg:text-left">
-            <ul class="footer-jiwa+ font-bold">
-              <li class="text-green-900 mb-3">JIWA+</li>
-              <li class="text-gray-500 font-bold">Download Sekarang</li>
+            <ul class="footer-jiwa+">
+              <li class="text-green-900 mb-3 font-bold">JIWA+</li>
+              <li class="text-gray-500">Download Sekarang</li>
               <li class="flex justify-center lg:justify-start mt-2 gap-2">
                 <div class="flex flex-col lg:gap-2">
-                  <img src="index pictures/misc/app-apple.png" class="h-8" />
-                  <img src="index pictures/misc/app-google.png" class="h-8" />
+                  <img
+                    src="Index/index pictures/misc/app-apple.png"
+                    class="h-8"
+                  />
+                  <img
+                    src="Index/index pictures/misc/app-google.png"
+                    class="h-8"
+                  />
                 </div>
               </li>
             </ul>
@@ -729,6 +759,7 @@
         </div>
       </div>
     </footer>
+
     <div class="w-full bg-gray-200 py-5 mt-0">
       <div
         class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-5 lg:px-10 text-sm text-gray-600"
