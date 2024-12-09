@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Freepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="Index\Logos\Icon.png">
+    <link rel="stylesheet" href="freepage-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header
+      class="fixed flex justify-center mx-auto lg:w-full bg-[#282424] backdrop-blur-md text-green-900 flex lg:flex-row justify-center px-4 lg:px-12 items-center "
+      style="font-family: Gabarito, sans-serif"
+    >
+      <!-- Main Navigation -->
+      <div
+        class="container flex sm:items-left lg:flex-row lg:items-center lg:justify-between font-bold py-5 mx-auto justify-center"
+      >
+        <!-- Navigation Menu -->
+        <!-- Navigation Menu -->
+        <div class="hidden lg:block px-8">
+          <ul class="list-none flex flex-row gap-20 text-lg">
+            <li class="dropdown relative">
+              <span class="inline-block">
+                BRAND
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-700 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  style="margin-left: 4px"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+              <div class="dropdown-content">
+                <a href="#" class="font-light text-sm">Jiwa Group</a>
+              </div>
+            </li>
+            <li class="dropdown relative">
+              <span class="inline-block">
+                PROJECTS
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-700 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  style="margin-left: 4px"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+              <div class="dropdown-content">
+                <a href="biodata.html" class="font-light text-sm">Biodata</a>
+                <a href="contact_us.html" class="font-light text-sm"
+                  >Contact Us</a
+                >
+                <a href="index.html" class="font-light text-sm">Index</a>
+                <a href="freepage.html" class="font-light text-sm">Free Page</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Logo -->
+        <div class="flex justify-center lg:justify-start">
+          <img
+            src="Index\Logos\download.png"
+            alt="janji-jiwa-logo"
+            class="w-16 lg:w-28"
+          />
+        </div>
+
+        <!-- Right Menu -->
+        <div class="hidden lg:block">
+          <ul class="flex flex-row gap-10 text-lg">
+            <li>JIWA+</li>
+            <li class="dropdown relative">
+              <span class="inline-block">
+                CORPORATE
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-700 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  style="margin-left: 4px"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+              <div class="dropdown-content">
+                <a href="biodata.html" class="font-light text-sm">Biodata</a>
+                <a href="contact_us.html" class="font-light text-sm"
+                  >Contact Us</a
+                >
+                <a href="index.html" class="font-light text-sm">Index</a>
+                <a href="freepage.html" class="font-light text-sm">Free Page</a>
+              </div>
+            </li>
+            <li class="dropdown relative">
+              <span class="inline-block">
+                ACCOUNT
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-700 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  style="margin-left: 4px"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+              <div class="dropdown-content">
+                <p>Login to</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Language Selection -->
+     
+      <div class="relative w-64 mx-auto sm:block lg:hidden z-50">
+        <!-- Button -->
+        <button
+          class="bg-white text-[#282424] px-4 py-2 rounded-lg w-full text-left flex justify-between items-center"
+          onclick="toggleDropdown()"
+        >
+          Menu
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 transition-transform duration-300"
+            id="dropdown-arrow"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+
+        <!-- Dropdown Content -->
+        <div
+          id="dropdown-content"
+          class="absolute left-0 w-full bg-white border border-gray-200 rounded-lg mt-2 shadow-lg max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out z-50"
+        >
+          <ul class="p-2 space-y-1">
+            <li>
+              <a
+                href="biodata.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Biodata
+              </a>
+            </li>
+            <li>
+              <a
+                href="contact_us.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Index
+              </a>
+            </li>
+            <li>
+              <a
+                href="freepage.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Free Page
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="topics-text">
+        <div class="topics">
+            <h2>Favorite Musics</h2>
+        </div>  
+        <div class="topics-p">
+            <p>(Hover Over It)</p>
+        </div>
+    </div>
+
+
+    <div class="musics">   
+    <div class="main-container flex flex-col lg:flex-row h-[1000px] ">
+        <div class="image-preview">
+
+            <img src="Index\pictures\Favorite Pictures\dandadan-key-art-wide.png" alt="dandadan poster">
+
+            <video paused loop muted playsinline aria-hidden="true">
+                <source src="Index\Videos\Dandadan.mp4" type="video/mp4">
+            </video>
+
+            <span class="overlay">
+                <div class="desc">
+                    <h1>オトノケ - Otonoke</h1>
+                    <p style="text-align: justify;">Genre : Japanese Hip Hop, J-Pop</p>
+                </a>
+                </div>
+            </span>
+        </div>
+
+        <div class="image-preview">
+            <img src="Index\pictures\Favorite Pictures\persona3.jpeg" alt="persona 3 cover">
+            <video paused loop muted aria-hidden="true">
+                <source src="Index\Videos\p3(1).mp4" type="video/mp4">
+            </video>
+
+            <span class="overlay">
+                <div class="desc">
+
+                    <h1>Color Your Night <br>- Persona 3</h1>
+
+                    <p style="text-align: justify;">Genre : Japanese Hip Hop, JazzRap</p>
+                </div>
+            </span>
+
+        </div>
+
+        <div class="image-preview">
+            <img src="https://i1.sndcdn.com/artworks-000609403228-atuv5f-t500x500.jpg" alt="5 cm per second poster">
+
+            <video paused loop muted playsinline aria-hidden="true">
+                <source src="Index\Videos\5 centimeters.mp4" type="video/mp4">
+            </video>
+
+            <span class="overlay">
+                <div class="desc">
+                    <h1>One More Time, <br>
+                         One More Chance -<br> 
+                         Masayoshi Yamazaki </h1>
+                    <p style="text-align: justify;">Genre : pop ballad</p>
+                </div>
+            </span>
+        </div>
+
+
+        <div class="image-preview">
+            <img src="https://i.scdn.co/image/ab67616d0000b273f41708165ec0fe7426d8f279" alt="Ian's Poster">
+
+            <video paused loop muted playsinline aria-hidden="true">
+                <source src="Index\Videos\ian.mp4" type="video/mp4">
+            </video>
+
+            <span class="overlay">
+                <div class="desc">
+                    <h1>Magic Johnson - Ian</h1>
+                    <p style="text-align: justify;">Genre : Hip-Hop, Rap</p>
+                </div>
+            </span>
+        </div>
+  
+    </div>
+</div>
+
+<div class="container mx-auto p-4 bg-white w-full">
+    <h1 class="text-2xl font-bold text-center mb-6 text-black">Some of My Favorite Books</h1>
+
+    <!-- Norse Mythology Section -->
+    <div class="flex flex-col md:flex-row items-center md:items-start mb-8">
+        <img src="Index/pictures/Favorite Pictures/snapedit_1729671501409.png" 
+             alt="Norse Mythology" 
+             class="h-[300px] md:w-1/3 rounded-lg  ">
+        <div class="md:ml-6 mt-4 md:mt-0">
+            <h2 class="text-xl font-semibold text-black">Norse Mythology</h2>
+            <h3 class="text-left text-gray-600">Neil Gaiman</h3>
+            <p class="mt-2 text-gray-700">
+                In "Norse Mythology," Neil Gaiman reimagines the tales of Odin, Thor, and Loki, weaving their 
+                adventures and complex relationships into engaging stories. He explores themes of fate and resilience, 
+                culminating in the inevitable Ragnarok. Gaiman makes these ancient myths accessible and relatable, 
+                inviting readers into a timeless world of magic.
+            </p>
+        </div>
+    </div>
+
+    <!-- The Holy Bible Section -->
+    <div class="flex flex-col md:flex-row items-center md:items-start mb-8">
+       
+        <div class="md:mr-6 mb-4 md:mb-0">
+            <h2 class="text-xl font-semibold text-black">The Holy Bible</h2>
+            <h3 class="text-gray-600">12 Apostles?</h3>
+            <p class="mt-2 text-gray-700">
+                The Bible is a special book that tells stories about God and His people. It has two parts: the Old 
+                Testament, which shares stories of creation and leaders like Moses, and the New Testament, which talks 
+                about Jesus and His teachings on love and kindness. Many people read the Bible to learn how to be good 
+                and treat others well.
+            </p>
+        </div>
+        <img src="Index/pictures/Favorite Pictures/bible.png" 
+        alt="The Holy Bible" 
+        class="h-[300px] md:w-1/3 rounded-lg ">
+    </div>
+
+    <!-- Origins Section -->
+    <div class="flex flex-col md:flex-row items-start">
+        <img src="Index/pictures/Favorite Pictures/origins.png" 
+             alt="Origins" 
+             class="h-[300px]  rounded-lg ">
+        <div class="md:ml-6 mt-4 md:mb-0">
+            <h2 class="text-xl font-semibold text-black">Origins</h2>
+            <h3 class="text-gray-600">Lewis Dartnell</h3>
+            <p class="mt-2 text-gray-700">Humans History Summarized</p>
+        </div>
+    </div>
+</div>
+
+
+    <div class="Bottom-part">
+        <div class="game-wrapper">
+            <div class="bottom-wrapper">
+
+                <div class="bottom-title">
+                    <h2>My Favorite Games</h2>
+                    <p style="font-weight: 200 ;">( Use Cursor to Slide )</p>
+                </div>
+            </div>
+          
+            
+            <swiper-container class="mySwiper mx-auto" watch-slides-progress="true" slides-per-view="1.5" centered-slides="true" space-between="50" grab-cursor="true">
+                <swiper-slide>
+                    <img src="https://m.media-amazon.com/images/I/71xeX+uUF1L.jpg">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://images4.alphacoders.com/782/782781.png">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://preview.redd.it/valorant-console-launch-key-art-v0-vbvtuj5xz9gd1.jpeg?auto=webp&s=0d9d0ba9bd959b69f66b254042393d8ba7563b01">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://media.licdn.com/dms/image/D5612AQEn4lf2edQfbw/article-cover_image-shrink_720_1280/0/1700063784895?e=2147483647&v=beta&t=Gko2985XVZvIvRpM94V4u3SrAm5Ea64F5EBCZDi4-uM">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://wallpapers.com/images/hd/persona-5-royal-red-joker-1myaue51vkztkq7l.jpg">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://www.gameuidatabase.com/uploads/Arknights01252021-022418-77137.jpg">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="https://store.aniplexusa.com/fgo/images/header.jpg">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="Index\pictures\Favorite Pictures\thumb-1920-1020120 (1).jpg">
+                </swiper-slide>
+            </swiper-container>
+            
+        </div>  
+    </div>
+
+    <div class="diatasnya-footer">
+        <footer class="bg-gray-100 pt-10">
+            <div
+              class="max-w-7xl mx-auto flex flex-wrap lg:flex-nowrap justify-between px-5 lg:px-10 lg:py-8 gap-8"
+            >
+              <!-- Left Section -->
+              <div class="lg:w-1/4 text-left lg:text-left">
+                <img
+                  src="Index/Logos/jiwa-logo.png"
+                  alt="janji-jiwa-logo"
+                  class="h-10 align-start lg:mx-0 mb-4"
+                />
+                <hr class="border-2 border-lime-500 w-14 align-start lg:mx-0" />
+                <p class="pt-2 text-gray-500">PT Luna Boga Narayan</p>
+                <h3 class="font-bold pt-4 text-green-900 text-left">Hubungi Kami</h3>
+                <p class="flex align-start text-gray-500 gap-2">
+                  <i class="material-icons text-green-800">mail_outline</i
+                  >info@jiwagroup.com
+                </p>
+                <p class="flex align-start items-center text-gray-500 gap-2">
+                  <i class="material-icons text-green-800">place</i>
+                  Jl. Kedoya Raya No.2 Kota Jakarta Barat, <br />Daerah Khusus Ibukota
+                  Jakarta 11520
+                </p>
+                <div class="flex align-start pt-5 gap-20 lg:gap-4 text-green-800">
+                  <button
+                    class="socmed-button border-2 border-green-700 py-1 px-5 hover:bg-green-700 hover:text-white flex items-center gap-2 "
+                  >
+                    <i class="fa fa-youtube-play text-green-800"></i>
+                    <a href="#">YouTube</a>
+                  </button>
+                  <button
+                    class="socmed-button border-2 border-green-700 py-1 px-5 hover:bg-green-700 hover:text-white flex items-center gap-2"
+                  >
+                    <i class="fa fa-instagram text-green-800"></i>
+                    <a href="#">Instagram</a>
+                  </button>
+                </div>
+              </div>
+      
+              <div class="flex justify-around lg:gap-40 gap-16 lg:w-full">
+                <!-- Middle Left Section -->
+                <div class="w-full lg:w-full lg:text-left">
+                  <ul class="footer-brands">
+                    <li class="text-green-900 mb-3 font-bold">BRAND</li>
+                    <li class="text-gray-500">Kopi Sejuta Jiwa</li>
+                    <li class="text-gray-500">Burger Geber</li>
+                    <li class="text-gray-500">Jiwa Tea</li>
+                    <li class="text-gray-500">Janji Jiwa</li>
+                  </ul>
+                </div>
+      
+                <!-- Middle Right Section -->
+                <div class="w-full lg:w-full text-center lg:text-left">
+                  <ul class="footer-jiwa+">
+                    <li class="text-green-900 mb-3 font-bold">JIWA+</li>
+                    <li class="text-gray-500">Download Sekarang</li>
+                    <li class="flex justify-center lg:justify-start mt-2 gap-2">
+                      <div class="flex flex-col lg:gap-2">
+                        <img
+                          src="Index/index pictures/misc/app-apple.png"
+                          class="h-8"
+                        />
+                        <img
+                          src="Index/index pictures/misc/app-google.png"
+                          class="h-8"
+                        />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+      
+              <!-- Right Section -->
+              <div class="w-full lg:w-1/4 text-center lg:text-left">
+                <ul class="footer-partnership font-bold">
+                  <li class="text-green-900 mb-3">PARTNERSHIP</li>
+                  <div
+                    class="partnership-border bg-green-800 text-white p-4 rounded-md"
+                  >
+                    <li class="mb-3 text-sm">
+                      Let's become a partner and build the<br />perfect product
+                    </li>
+                    <li>
+                      <button
+                        class="bg-white text-green-900 px-5 py-2 rounded-md border border-green-900 hover:bg-teal-500 hover:text-white transition ease-in-out duration-200"
+                      >
+                        Become A Partner
+                      </button>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </footer>
+</div>
+    
+<div class="w-full bg-gray-200 py-5 mt-0">
+    <div
+      class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-5 lg:px-10 text-sm text-gray-600"
+    >
+      <!-- Copyright Text -->
+      <p class="w-full lg:w-auto text-center lg:text-left mb-4 lg:mb-0" style="color: #282424;">
+        © 2024 Jiwa Group. All rights reserved.
+      </p>
+
+      <!-- University Links -->
+      <div
+        class="w-full lg:w-auto flex flex-col lg:flex-row lg:items-center gap-4 text-center lg:text-left"
+      >
+        <h4 class="font-semibold text-gray-800">Visit Our University:</h4>
+        <ul class="flex flex-col lg:flex-row gap-4">
+          <li>
+            <a
+              href="https://fti.unai.edu/"
+              class="text-green-700 hover:underline"
+              >IT Faculty</a
+            >
+          </li>
+          <li>
+            <a href="https://unai.edu/" class="text-green-700 hover:underline"
+              >University of Advent Indonesia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://jurnal.unai.edu/index.php/teika"
+              class="text-green-700 hover:underline"
+              >Journal</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="freepage-script.js"></script>
+</body>
+</html>
