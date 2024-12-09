@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scriptindex.js"></script>
+  </head>
+
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <header
+      class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md text-green-900 flex lg:flex-row justify-center px-4 lg:px-12 items-center z-50"
+      style="font-family: Gabarito, sans-serif"
+    >
+      <!-- Main Navigation -->
+      <div
+        class="container flex sm:items-left lg:flex-row lg:items-center lg:justify-between font-bold py-5"
+      >
+        <!-- Navigation Menu -->
+        <div class="hidden lg:block px-8">
+          <ul class="list-none flex flex-row gap-20 text-lg">
+            <li class="dropdown">
+              BRAND
+              <div class="dropdown-content">
+                <a href="#" class="font-light text-sm">Jiwa Group</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              PROJECTS
+              <div class="dropdown-content">
+                <a href="#" class="font-light text-sm">Biodata</a>
+                <a href="#" class="font-light text-sm">Contact Us</a>
+                <a href="#" class="font-light text-sm">Additional Page</a>
+                <a href="#" class="font-light text-sm">Free Content</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Logo -->
+        <div class="flex justify-center lg:justify-start">
+          <img
+            src="Index\Logos\jiwa-logo.png"
+            alt="janji-jiwa-logo"
+            class="w-16 lg:w-28"
+          />
+        </div>
+
+        <!-- Right Menu -->
+        <div class="hidden lg:block">
+          <ul class="flex flex-row gap-10 text-lg">
+            <li>JIWA+</li>
+            <li class="dropdown">
+              CORPORATE
+              <div class="dropdown-content">
+                <a href="#" class="font-light text-sm">About Us</a>
+                <a href="#" class="font-light text-sm">Career</a>
+                <a href="#" class="font-light text-sm">Contact</a>
+                <a href="#" class="font-light text-sm">ESG</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              ACCOUNT
+              <div class="dropdown-content">
+                <p>Login to</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Language Selection -->
+      <div class="flex flex-row justify-center items-center py-5 px-10 gap-2">
+        <img
+          src="Index/index pictures/languange flag/lang-en.png"
+          alt="indonesian-flag"
+          class="w-5 h-5"
+        />
+        <p class="font-medium text-xs">|</p>
+        <img
+          src="Index/index pictures/languange flag/lang-en.png"
+          alt="english-flag"
+          class="w-5 h-5"
+        />
+      </div>
+      <div class="relative w-64 mx-auto sm:block lg:hidden z-50">
+        <!-- Button -->
+        <button
+          class="bg-teal-600 text-white px-4 py-2 rounded-lg w-full text-left flex justify-between items-center"
+          onclick="toggleDropdown()"
+        >
+          Menu
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 transition-transform duration-300"
+            id="dropdown-arrow"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+
+        <!-- Dropdown Content -->
+        <div
+          id="dropdown-content"
+          class="absolute left-0 w-full bg-white border border-gray-200 rounded-lg mt-2 shadow-lg max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out z-50"
+        >
+          <ul class="p-2 space-y-1">
+            <li>
+              <a
+                href="Biodata\biodata.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Biodata
+              </a>
+            </li>
+            <li>
+              <a
+                href="contact_us\contact_us.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="additional_page\posts.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Additional Page
+              </a>
+            </li>
+            <li>
+              <a
+                href="free_content\freepage.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Free Content
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <form
+      id="registrationForm"
+      class="bg-white p-6 sm:p-8 rounded shadow-lg w-full max-w-sm sm:max-w-md"
+    >
+      <h1 class="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">
+        Student Registration
+      </h1>
+
+      <!-- Full Name -->
+      <div class="mb-4">
+        <label for="fullName" class="block text-sm font-medium text-gray-700"
+          >Full Name</label
+        >
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded"
+          placeholder="Enter your full name"
+        />
+      </div>
+
+      <!-- Student ID -->
+      <div class="mb-4">
+        <label for="studentId" class="block text-sm font-medium text-gray-700"
+          >Student ID (NIM)</label
+        >
+        <input
+          type="text"
+          id="studentId"
+          name="studentId"
+          class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded"
+          placeholder="Enter your student ID"
+        />
+      </div>
+
+      <!-- Email Address -->
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-gray-700"
+          >Email Address</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded"
+          placeholder="Enter your email"
+        />
+      </div>
+
+      <!-- Faculty/Major -->
+      <div class="mb-4">
+        <label for="faculty" class="block text-sm font-medium text-gray-700"
+          >Faculty/Major</label
+        >
+        <select
+          id="faculty"
+          name="faculty"
+          class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded"
+        >
+          <option value="">Select your faculty</option>
+          <option value="Engineering">IT</option>
+          <option value="Business">Ekonomi</option>
+          <option value="Arts">Perawat</option>
+          <option value="Sciences">Filsafat</option>
+          <option value="Sciences">Keguruan & Ilmu Pendidikan</option>
+          <option value="Sciences">MIPA</option>
+        </select>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="mb-4">
+        <label for="dob" class="block text-sm font-medium text-gray-700"
+          >Date of Birth</label
+        >
+        <input
+          type="date"
+          id="dob"
+          name="dob"
+          class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded"
+        />
+      </div>
+
+      <!-- Gender -->
+      <div class="mb-4">
+        <span class="block text-sm font-medium text-gray-700">Gender</span>
+        <div class="flex items-center mt-2 space-x-4">
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="Male"
+              class="focus:ring-2 focus:ring-blue-500"
+            />
+            Male
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="Female"
+              class="focus:ring-2 focus:ring-blue-500"
+            />
+            Female
+          </label>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="mb-4">
+        <label for="address" class="block text-sm font-medium text-gray-700"
+          >Address</label
+        >
+        <textarea
+          id="address"
+          name="address"
+          class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray- 300 rounded"
+          placeholder="Enter your address"
+        ></textarea>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="mb-4">
+        <label for="phoneNumber" class="block text-sm font-medium text-gray-700"
+          >Phone Number</label
+        >
+        <input
+          type="text"
+          id="phoneNumber"
+          name="phoneNumber"
+          class="focus:ring-2 focus:ring-blue-500 w-full mt-1 p-2 border border-gray-300 rounded"
+          placeholder="Enter your phone number"
+        />
+      </div>
+
+      <!-- Buttons -->
+      <div
+        class="flex flex-col sm:flex-row items-center justify-between mt-6 space-y-4 sm:space-y-0"
+      >
+        <button
+          type="button"
+          id="clearButton"
+          class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 w-full sm:w-auto"
+        >
+          Clear
+        </button>
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full sm:w-auto"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

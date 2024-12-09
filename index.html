@@ -109,7 +109,7 @@
           class="w-5 h-5"
         />
       </div>
-      <div class="relative w-64 mx-auto sm:block md:hidden z-50">
+      <div class="relative w-64 mx-auto sm:block lg:hidden z-50">
         <!-- Button -->
         <button
           class="bg-teal-600 text-white px-4 py-2 rounded-lg w-full text-left flex justify-between items-center"
@@ -118,7 +118,7 @@
           Menu
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 transform transition-transform duration-300"
+            class="h-5 w-5 transition-transform duration-300"
             id="dropdown-arrow"
             fill="none"
             viewBox="0 0 24 24"
@@ -132,20 +132,49 @@
             />
           </svg>
         </button>
-
+      
         <!-- Dropdown Content -->
         <div
           id="dropdown-content"
-          class="absolute left-0 w-full bg-gray-100 border border-gray-300 rounded-lg mt-2 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out z-50"
+          class="absolute left-0 w-full bg-white border border-gray-200 rounded-lg mt-2 shadow-lg max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out z-50"
         >
-          <div class="p-4">
-            <p class="text-gray-700">
-              sir, i just remembered that im just an ordinary student trying to
-              replicate a mega corporate's website
-            </p>
-          </div>
+          <ul class="p-2 space-y-1">
+            <li>
+              <a
+                href="Biodata\biodata.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Biodata
+              </a>
+            </li>
+            <li>
+              <a
+                href="contact_us\contact_us.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="additional_page\posts.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Additional Page
+              </a>
+            </li>
+            <li>
+              <a
+                href="free_content\freepage.html"
+                class="block text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-4 py-2 rounded-md transition duration-150"
+              >
+                Free Content
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+      
     </header>
 
     <div>
@@ -157,7 +186,7 @@
       />
     </div>
 
-    <div class="carousel-container" id="carousel-1">
+    <div class="carousel-container " id="carousel-1">
       <button class="nav-button prev">
         <img
           src="Index\index pictures\misc\arrow-left.png"
@@ -199,7 +228,7 @@
       </div>
     </div>
 
-    <div class="py-8 px-8 sm:bg-cover md:bg-cover block lg:hidden">
+    <div class="py-8 px-8 sm:bg-cover md:bg-cover block lg:hidden ">
       <swiper-container
         class="mySwiper"
         space-between="30"

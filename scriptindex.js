@@ -172,3 +172,4 @@ window.addEventListener('resize', () => {
   const slideWidth = slides[0].clientWidth;
   slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
 });
+
