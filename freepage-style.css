@@ -36,7 +36,7 @@
 
 @media (max-width: 768px){
     .main-container{
-    height: 700px;
+    height: 400px;
     padding: 0 2rem;
     }
 }
@@ -249,7 +249,7 @@ body{
 .main-container{
     width: 1000px;
     height: 400px;
-    display: flex;
+    display:flex;
     background: #282424;
     gap: 10px;
     
